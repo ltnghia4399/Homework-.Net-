@@ -11,7 +11,9 @@ namespace HomeworkExample
     class DataProvider
     {
         private static DataProvider instance;
-
+        /// <summary>
+        /// Sigleton of Dataprovider
+        /// </summary>
         internal static DataProvider Instance
         {
             get
@@ -27,6 +29,12 @@ namespace HomeworkExample
             set => instance = value;
         }
 
+        /// <summary>
+        /// Insert, Update, Delete
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
@@ -59,6 +67,12 @@ namespace HomeworkExample
             return data;
         }
 
+        /// <summary>
+        /// Select
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="parameter"></param>
+        /// <returns></returns>
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
 
@@ -108,7 +122,11 @@ namespace HomeworkExample
             return data;
 
         }
-
+        /// <summary>
+        /// Get String Value
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
         public string GetFieldValues(string query)
         {
             string mString = null;
