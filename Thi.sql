@@ -78,7 +78,7 @@ go
 
 
 SELECT dbo.thanhtien('KH01', 'SH');
-
+/*
 go
 create function CustomerTotal (@makh varchar(10))
 returns int 
@@ -109,7 +109,7 @@ go
 drop function dbo.CustomerTotal
 
 SELECT dbo.CustomerTotal('KH04') as TongTien ;
-
+*/
 select * from khachhang;
 
 select distinct Sum( dbo.thanhtien(Chitiet.MAKH, Chitiet.MASD)) as TongTien FROM khachhang JOIN Chitiet ON Khachhang.MAKH = Chitiet.MAKH JOIN Sudung ON Sudung.MASD = Chitiet.MASD WHERE Chitiet.MAKH  = 'KH04'
