@@ -1,4 +1,4 @@
 # Homework-.Net-
 
-use QLKH
+use QLKH.
 Execute hàm dbo.thanhtien trong Thi.sql.
